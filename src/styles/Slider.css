@@ -1,0 +1,165 @@
+.slider {
+  height: 100vh;
+  max-height: 1400px;
+  overflow: hidden;
+  position: relative;
+}
+
+.sliderWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.slideContainer {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide ::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  bottom: 0vh;
+  left: 0;
+  overflow: hidden;
+  opacity: 0.5;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.2),
+    0%,
+    rgba(0, 0, 0, 0.2),
+    50%,
+    rgba(0, 0, 0, 0.6),
+    100%
+  );
+}
+
+.slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* width: 100vw;
+    height: 100vh; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sliderContent {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  max-width: 1600px;
+  width: calc(100% - 100px);
+  color: #fff;
+}
+
+.sliderContent h1 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  text-align: left;
+  margin-bottom: 0.8rem;
+}
+
+.sliderContent p {
+  margin-bottom: 1.2rem;
+  font-size: 1.3rem;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+.slideBtn {
+  width: 150px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sliderBtns {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  display: flex;
+  z-index: 10;
+}
+
+.sliderBtns svg {
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  padding: 10px;
+  margin-right: 1rem;
+  user-select: none;
+  transition: 0.3s;
+}
+
+.sliderBtns svg:hover {
+  background: #9bb7d4;
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+  .sliderContent h1 {
+    font-size: 1.5rem;
+  }
+  .slideBtn {
+    width: 100px;
+    height: 40px;
+    font-size: 0.7rem;
+  }
+  .sliderBtns {
+    position: absolute;
+    bottom: 10px;
+    right: 1px;
+    display: flex;
+    z-index: 10;
+  }
+
+  .sliderContent {
+    max-width: 1600px;
+    width: calc(100% - 20px);
+    margin: 0.8rem;
+  }
+
+  .sliderContent h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    text-align: left;
+    margin-bottom: 0.8rem;
+  }
+
+  .sliderContent p {
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  }
+  .sliderBtns svg {
+    padding: 8px;
+  }
+}

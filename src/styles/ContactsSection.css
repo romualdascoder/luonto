@@ -1,0 +1,11 @@
+.contactsSection {
+  width: 100%;
+}
+
+.contactsSection .sliderBtns {
+  display: none;
+}
+
+.contactsSection .slider {
+  height: 600px;
+}

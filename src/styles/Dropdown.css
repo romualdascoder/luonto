@@ -1,0 +1,86 @@
+.dropDownContainer {
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: rgb(155, 183, 212, 1);
+  display: grid;
+  align-items: center;
+  top: 0;
+  left: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.icon {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.5rem;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.icon svg {
+  color: #000d1a;
+}
+
+.dropDownWrapper {
+}
+
+.dropDownMenu {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 60px);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.dropDownLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropDownLink a {
+  color: #fff;
+  font-size: 1.1rem;
+  text-decoration: none;
+  list-style: none;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.dropDownLink a:hover {
+  color: #000d1a;
+}
+
+.btnWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropDownButton {
+  display: flex;
+  align-items: center;
+  height: 43px;
+  max-height: 43px;
+  width: 120px;
+  max-width: 200px;
+  background-color: rgb(28, 24, 24);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dropDownButton a {
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 480px) {
+  .dropDownMenu {
+    grid-template-rows: repeat(4, 60px);
+  }
+}

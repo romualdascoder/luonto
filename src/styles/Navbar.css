@@ -1,0 +1,97 @@
+.navbar {
+  width: 100%;
+  max-width: 100%;
+  max-height: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem 1rem 1rem;
+  z-index: 100;
+  position: fixed;
+}
+
+.navbar.active {
+  background: linear-gradient(
+    90deg,
+    rgb(155, 183, 212, 1) 0%,
+    rgb(155, 188, 223, 1) 100%
+  );
+}
+
+.mobileMenuBtn {
+  display: none;
+}
+
+.logo img {
+  width: 85px;
+  height: 35px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+  color: #fff;
+}
+
+.menuLinks a {
+  padding: 0 1rem;
+  color: #fff;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+  height: 45px;
+  background-color: rgb(28, 24, 24);
+}
+
+.button a {
+  color: #fff;
+  white-space: nowrap;
+  border: none;
+  min-width: 120px;
+  max-width: 180px;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    width: 100%;
+    max-height: 30px;
+    padding: 0.5rem 1rem 1rem 0.5rem;
+  }
+  .logo img {
+    width: 80px;
+    height: 30px;
+    margin-left: 0px;
+    padding-top: 10px;
+  }
+  .menu {
+    display: none;
+  }
+  .button {
+    display: none;
+  }
+  .mobileMenuBtn {
+    display: block;
+    margin-top: 10px;
+    margin-right: 15px;
+    width: 30px;
+    cursor: pointer;
+  }
+  .mobileMenuBtn img {
+    width: 100%;
+  }
+}
